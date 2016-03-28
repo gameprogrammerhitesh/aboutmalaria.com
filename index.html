@@ -1,0 +1,109 @@
+
+<!--
+
+     aboutmalaria.com -  Website for Web Technology-1   
+   -----------------------------------------------------------
+    Designed by Hitesh Sathawane                                   
+	Email:hiteshsathawane@live.com            
+    Website:http://hiteshsathawane.webs.com 											
+    All rights reserved.   
+
+
+-->
+<!DOCTYPE html>
+
+<html>
+<head>
+<!-- Start css code for forms   -->
+ <style type = "text/css">
+.label{
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:#47a3da; 
+}
+.tableBorder{
+    border:solid 1px #47a3da;
+    margin-top:100px;
+}
+.message{
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+     color:#47a3da;
+}	 
+</style> 
+
+
+<!-- End css code for forms   -->
+<!-- Right Click Disabled Code -->
+
+<script language=JavaScript> var message="For Security Reason Right Click is Disable"; function clickIE4(){ if (event.button==2){ alert(message); return false; } } function clickNS4(e){ if (document.layers||document.getElementById&&!document.all){ if (e.which==2||e.which==3){ alert(message); return false; } } } if (document.layers){ document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS4; } else if (document.all&&!document.getElementById){ document.onmousedown=clickIE4; } document.oncontextmenu=new Function("alert(message);return false") </script>
+
+
+<!-- Start javascript validation for forms   -->
+<script type="text/javascript">
+function validateForm()
+{
+	var user=document.login.username.value;
+	var user=user.trim();
+	var pass=document.login.password.value;
+ 
+	if(user == '')
+	{
+		document.getElementById('error').innerHTML="Please Enter Username";
+		return false;
+	}
+ 
+	if(pass == '')
+	{
+		document.getElementById('error').innerHTML="Please Enter Password";
+		return false;
+	}
+}
+</script>
+<!-- End javascript validation code for forms   -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login Page</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+</head>
+<body>
+<table cellpadding="2px" cellspacing="1px" bgcolor="#F4F5F7" width="400px" class="tableBorder" align="center">
+    <tr>
+        <td colspan="2" bgcolor="#47a3da">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="2" class="label">&nbsp;</td>
+    </tr>
+    
+    <tr>
+        <td align="center" colspan="2">
+            <img src="images/locked.png" border="0" align="absbottom"/>&nbsp;
+            <span class="message">Login to the  aboutmalaria.com</span></td>
+    </tr>                   
+    <tr>
+        <!--<td colspan="2" class="label">&nbsp;</td>-->
+        <td colspan="2" class="label"><div id="error" align="center"></div></td>
+    </tr>
+    <form method="POST" action="index1.html" name="login" onSubmit="return validateForm()">
+
+    <tr>
+        <td class="label" align="right" width="40%">Username:</td>
+        <td align="left" width="60%"><input type="text" name="username" id="username" maxlength="20"/></td>
+    </tr>
+    <tr>
+        <td class="label" align="right">Password:</td>
+        <td align="left"><input type="password" name="password" id="password" maxlength="20" /></td>
+    </tr>
+    <tr>
+        <td class="label" align="right">&nbsp;</td>
+        <td align="left"><input type="submit" value="Login" /></td>
+    </tr>                   
+    <tr>
+        <td colspan="2" class="label">&nbsp;</td>
+    </tr> 
+    </form>                  
+</table>
+</body>
+</html>
